@@ -1,0 +1,326 @@
+<html lang="en">
+  <!DOCTYPE html>
+  <head>
+    <script
+      type="text/JavaScript"
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+    ></script>
+    <script
+      type="text/JavaScript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.3/js/jquery.tablesorter.min.js"
+    ></script>
+    <title>W3.CSS Template</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">-->
+    <link rel="stylesheet" href="w3-cssfile.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <!--<link rel="stylesheet" for cloudfare icons-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- go to https://fonts.google.com/ for google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Material Icons Outlined"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Navbar (sit on top) -->
+    <div class="eb-garamond" style="z-index: 99">
+      <div class="w3-bar w3-white w3-wide w3-padding header-style">
+        <a href="index.html" class="w3-bar-item w3-button">MS</a>
+        <!-- Float links to the right. Hide them on small screens -->
+        <div class="w3-centernav w3-hide-small lato-regular">
+          <a href="Marketplace.html" class="w3-bar-item w3-button"
+            >Marketplace</a
+          >
+          <a href="Allstate.html" class="w3-bar-item w3-button">Allstate</a>
+          <a href="UpJaunt.html" class="w3-bar-item w3-button">UpJaunt</a>
+          <a href="Videos.html" class="w3-bar-item w3-button">Videos</a>
+          <a href="AboutMe.html" class="w3-bar-item w3-button">About Me</a>
+        </div>
+        <div class="w3-right w3-hide-small" style="color: #1d1d1d">
+          <i class="material-icons" style="font: size 24px">shopping_cart</i>
+          <i class="material-icons" style="font: size 24px">search</i>
+        </div>
+        <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+        <a
+          href="javascript:void(0)"
+          class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium"
+          onclick="w3_open()"
+        >
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- Sidebar on small screens when clicking the menu icon -->
+    <nav
+      class="mysidebar w3-bar-block w3-card w3-animate-left w3-hide-medium w3-hide-large"
+      style="display: none"
+      id="mySidebar"
+    >
+      <a
+        href="javascript:void(0)"
+        onclick="w3_close()"
+        class="w3-bar-item w3-button w3-large w3-padding-16"
+        >×</a
+      >
+      <a href="index.html" onclick="w3_close()" class="w3-bar-item w3-button"
+        >Main</a
+      >
+      <a
+        href="Marketplace.html"
+        onclick="w3_close()"
+        class="w3-bar-item w3-button"
+        >Marketplace</a
+      >
+      <a href="Allstate.html" onclick="w3_close()" class="w3-bar-item w3-button"
+        >Allstate</a
+      >
+      <a href="UpJaunt.html" onclick="w3_close()" class="w3-bar-item w3-button"
+        >UpJaunt</a
+      >
+      <a href="Videos.html" onclick="w3_close()" class="w3-bar-item w3-button"
+        >Videos</a
+      >
+      <a href="AboutMe.html" onclick="w3_close()" class="w3-bar-item w3-button"
+        >About Me</a
+      >
+    </nav>
+
+    <!-- Header -->
+    <header
+      class="w3-display-container w3-content w3-wide"
+      style="max-width: 100%; z-index: -1"
+      id="home"
+    >
+      <img
+        class="w3-image michelle-extrapadding"
+        src="MarketplacePortfolioImageReversed.png"
+        width="100%"
+        height="auto"
+      />
+    </header>
+    <header
+      class="w3-display-container w3-content w3-wide"
+      style="max-width: 87.5%; z-index: -1"
+      id="home"
+    >
+      <div class="w3-display-bottomleft w3-container">
+        <h1
+          class="eb-garamond padding-a michelle-paddingb michelle-h3"
+          style="color: #fafafa"
+        >
+          Marketplace
+        </h1>
+        <h2
+          class="lato-regular padding-b michelle-paddingc michelle-h4"
+          style="color: #fafafa"
+        >
+          Enterprise product
+        </h2>
+      </div>
+    </header>
+
+    <!-- Page content -->
+    <div
+      class="w3-content padding-vertical-40"
+      style="max-width: 87.5%; z-index: -1"
+    >
+      <!-- Project Section -->
+      <style>
+        th,
+        td {
+          text-align: left;
+          padding: 40px;
+          font-size: 17px;
+          font-family: Arial, Helvetica, sans-serif;
+        }
+        th {
+          border-bottom: 0.5pt solid black;
+        }
+      </style>
+
+      <h3 class="lato-regular padding: 40px michelle-h3">
+        Certificate Error Use Cases
+      </h3>
+      <table id="myTable" style="font-size: 24px">
+        <thead>
+          <tr>
+            <th>Scenarios</th>
+            <th>Existing in System</th>
+            <th>New Entry</th>
+            <th>Outcome</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr role="row">
+            <td>
+              New Certificate<br />
+              New Service Role ID
+            </td>
+            <td>-</td>
+            <td>
+              CERT 1<br />
+              SRID 1
+            </td>
+            <td><span style="color: green">YES</span></td>
+          </tr>
+          <tr role="row">
+            <td>
+              Existing Certificate<br />
+              Existing Service Role ID
+            </td>
+            <td>
+              CERT 1<br />
+              SRID 1
+            </td>
+            <td>
+              CERT 1<br />
+              SRID 1
+            </td>
+            <td><span style="color: green">YES</span></td>
+          </tr>
+          <tr role="row">
+            <td>
+              Existing Certificate<br />
+              New Service Role ID
+            </td>
+            <td>
+              CERT 1<br />
+              SRID 1
+            </td>
+            <td>
+              CERT 1<br />
+              <span style="color: red">SRID 2</span>
+            </td>
+            <td><span style="color: red">NO</span></td>
+          </tr>
+          <tr role="row">
+            <td>
+              Existing Certificate<br />
+              New Service Role ID
+            </td>
+            <td>
+              CERT 1 ("CERT 1")<br />
+              SRID 1
+            </td>
+            <td>
+              CERT 2 <span style="color: red">("CERT 1")</span><br />
+              SRID 2
+            </td>
+            <td><span style="color: red">NO</span></td>
+          </tr>
+          <tr role="row">
+            <td>
+              New Certificate<br />
+              Existing Service Role ID
+            </td>
+            <td>
+              CERT 1<br />
+              SRID 1
+            </td>
+            <td>
+              <span style="color: red">CERT 2</span><br />
+              SRID 1
+            </td>
+            <td><span style="color: red">NO</span></td>
+          </tr>
+          <tr role="row">
+            <td>
+              New Certificate<br />
+              Existing Service Role ID
+            </td>
+            <td>
+              CERT 1 CERT 2<br />
+              SRID 1 SRID 1
+            </td>
+            <td style="color: red; font-size: 17px">
+              CERT 2<br />
+              SRID 1
+            </td>
+            <td><span style="color: red">NO</span></td>
+          </tr>
+        </tbody>
+      </table>
+      <!-- End page content -->
+    </div>
+
+    <!-- Footer -->
+    <footer class="w3-center w3-white w3-padding-16 footer-style">
+      <div class="latto-regular" style="font: size 24px; color: #6e6e73">
+        <h6>© 2024 MICHELLE SHEA</h6>
+        <i
+          class="material-icons-outlined"
+          style="margin-top: 12px; vertical-align: middle"
+          >email</i
+        >
+        <a
+          class="fa fa-linkedin w3-hover-opacity"
+          style="margin-top: 12px; vertical-align: middle"
+          href="https://www.linkedin.com/"
+          target="_blank"
+        ></a>
+        <a
+          class="fa fa-instagram w3-hover-opacity"
+          style="margin-top: 12px; vertical-align: middle"
+          href="https://www.instagram.com/"
+          target="_blank"
+        ></a>
+        <a
+          class="fa fa-facebook-official w3-hover-opacity"
+          style="margin-top: 12px; vertical-align: middle"
+          href="https://www.facebook.com/"
+          target="_blank"
+        ></a>
+      </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+      // Toggle between showing and hiding the sidebar when clicking the menu icon
+      var mySidebar = document.getElementById("mySidebar");
+
+      function w3_open() {
+        if (mySidebar.style.display === "block") {
+          mySidebar.style.display = "none";
+        } else {
+          mySidebar.style.display = "block";
+        }
+      }
+
+      // Close the sidebar with the close button
+      function w3_close() {
+        mySidebar.style.display = "none";
+      }
+    </script>
+
+    <script>
+      // sortable table
+      $(document).ready(function () {
+        $("table#myTable").tablesorter({
+          sortList: [[1, 0]], // first index - column. second index - 0 for asc; 1 for desc
+          CssAsc: "tablesorter-headerAsc",
+          CssDesc: "tablesorter-headerDesc",
+        });
+      });
+    </script>
+  </body>
+</html>
